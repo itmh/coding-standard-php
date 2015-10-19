@@ -6,11 +6,11 @@
 
 #####Установить PHP_CodeSniffer:
 
-    composer global require squizlabs/php_codesniffer --prefer-dist
+    composer global require squizlabs/php_codesniffer 
 
 #####Склонировать репозиторий:
 
-    git clone git://github.com/itmh/php-standard-miralogic $HOME/.php-standard-miralogic
+    git clone https://github.com/itmh/php-standard-miralogic.git $HOME/.php-standard-miralogic
 
 #####Создать в папке со стандартами симлинк на склонированный репозиторий
 
