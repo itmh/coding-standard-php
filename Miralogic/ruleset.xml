@@ -54,5 +54,30 @@
 
         <!-- выравнивание тернарного оператора -->
         <exclude name="Squiz.WhiteSpace.OperatorSpacing.SpacingBefore"/>
+
+        <!-- обязательное сравнение с true/false -->
+        <exclude name="Squiz.Operators.ComparisonOperatorUsage.ImplicitTrue"/>
+        <exclude name="Squiz.Operators.ComparisonOperatorUsage.NotAllowed"/>
+
+        <!-- тернарный оператор -->
+        <exclude name="Squiz.PHP.DisallowInlineIf.Found"/>
+
+        <!-- последняя запятая в массиве -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.NoCommaAfterLast"/>
+        <!-- выравнивание массива -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned"/>
+
+        <!-- однострочный блочный комментарий -->
+        <exclude name="Squiz.Commenting.BlockComment.SingleLine"/>
+
+        <!-- слитная конкатенация -->
+        <exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"/>
+
+        <!-- выравнивание скобок у аргументов функции -->
+        <exclude name="PEAR.Functions.FunctionCallSignature.ContentAfterOpenBracket"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.CloseBracketLine"/>
+
+        <!-- несколько значений в однострочном массиве -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
     </rule>
 </ruleset>
