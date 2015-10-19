@@ -8,12 +8,18 @@
 
     <rule ref="PHPCS">
         <!-- phpdoc теги -->
+        <exclude name="PEAR.Commenting.FileComment.Missing"/>
         <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
         <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingLinkTag"/>
         <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingPackageTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingAuthorTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
 
         <!-- // end class в конце класса -->
         <exclude name="PEAR.Commenting.ClassComment.Missing"/>
