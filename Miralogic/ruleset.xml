@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ruleset name="Miralogic">
+    <description>Miralogic IT internal standard</description>
+
+    <!-- Исключаем проверку вендорских библиотек  -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>lib/vendor/*</exclude-pattern>
+
+    <rule ref="PHPCS">
+        <!-- phpdoc теги -->
+        <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingAuthorTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingCategoryTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLicenseTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingLinkTag"/>
+        <exclude name="PEAR.Commenting.FileComment.MissingPackageTag"/>
+
+        <!-- // end class в конце класса -->
+        <exclude name="PEAR.Commenting.ClassComment.Missing"/>
+        <!-- // end method в конце функции -->
+        <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing"/>
+
+        <!-- приватные поля с префиксом _ -->
+        <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+        <!-- приватные методы с префиксом _ -->
+        <exclude name="PEAR.NamingConventions.ValidFunctionName.PrivateNoUnderscore"/>
+
+        <!-- 2 пустых строки между методами -->
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.After"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.Before"/>
+
+        <!-- пустая строка в конце метода -->
+        <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
+
+        <!-- ограничение на длину строки -->
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+
+        <!-- выравнивание ключей массивов -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned"/>
+        <!-- выравнивание закрывающей скобки массива -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
+
+        <!-- пробел между кастом и значением -->
+        <exclude name="Generic.Formatting.SpaceAfterCast.NoSpace"/>
+
+        <!-- выравнивание нескольких последовательныъ присвоений -->
+        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSame"/>
+
+        <!-- выравнивание тернарного оператора -->
+        <exclude name="Squiz.WhiteSpace.OperatorSpacing.SpacingBefore"/>
+    </rule>
+</ruleset>
