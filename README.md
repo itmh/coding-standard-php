@@ -1,4 +1,4 @@
-Стандарт кодирования Miralogic
+Стандарт кодирования ITMH
 ==============================
 
 Установка
@@ -10,14 +10,14 @@
 
 #####Склонировать репозиторий:
 
-    git clone https://github.com/itmh/php-standard-miralogic.git $HOME/.php-standard-miralogic
+    git clone https://github.com/itmh/php-standard-itmh.git $HOME/.php-standard-itmh
 
 #####Создать в папке со стандартами симлинк на склонированный репозиторий
 
-    ln -sv $HOME/.php-standard-miralogic/Miralogic $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+    ln -sv $HOME/.php-standard-itmh/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
 
 Использование
 -------------
 
-    phpcs --standard=Miralogic /path/to/file.php
-    phpcs --standard=Miralogic /path/to/directory
+    phpcs --standard=ITMH /path/to/file.php
+    phpcs --standard=ITMH /path/to/directory
