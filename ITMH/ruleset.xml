@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ruleset name="Miralogic">
-    <description>Miralogic IT internal standard</description>
+<ruleset name="ITMH">
+    <description>ITMH internal standard</description>
 
     <!-- Исключаем проверку вендорских библиотек  -->
     <exclude-pattern>vendor/*</exclude-pattern>
