@@ -82,6 +82,10 @@
         <!-- несколько значений в однострочном массиве -->
         <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
         
+        <!-- todo: сформулировать -->
         <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
+        
+        <!-- знак препинания в конце однострочного комментария -->
+        <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
     </rule>
 </ruleset>
