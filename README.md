@@ -10,11 +10,11 @@
 
 #####Склонировать репозиторий:
 
-    git clone https://github.com/itmh/php-standard-itmh.git $HOME/.php-standard-itmh
+    git clone https://github.com/itmh/php-standard.git $HOME/.php-standard
 
 #####Создать в папке со стандартами симлинк на склонированный репозиторий
 
-    ln -sv $HOME/.php-standard-itmh/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+    ln -sv $HOME/.php-standard/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
 
 Использование
 -------------
