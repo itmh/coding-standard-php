@@ -81,5 +81,7 @@
 
         <!-- несколько значений в однострочном массиве -->
         <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
+        
+        <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
     </rule>
 </ruleset>
