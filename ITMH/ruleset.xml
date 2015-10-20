@@ -25,6 +25,8 @@
         <exclude name="PEAR.Commenting.ClassComment.Missing"/>
         <!-- // end method в конце функции -->
         <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing"/>
+        <!-- // end switch в конце условия -->
+        <exclude name="Squiz.Commenting.PostStatementComment.Found"/>
 
         <!-- приватные поля с префиксом _ -->
         <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
