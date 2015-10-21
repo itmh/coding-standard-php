@@ -27,6 +27,8 @@
         <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing"/>
         <!-- // end switch в конце условия -->
         <exclude name="Squiz.Commenting.PostStatementComment.Found"/>
+        <!-- // end if в конце длинного условия -->
+        <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
 
         <!-- приватные поля с префиксом _ -->
         <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
@@ -81,9 +83,6 @@
 
         <!-- несколько значений в однострочном массиве -->
         <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
-        
-        <!-- todo: сформулировать -->
-        <exclude name="Squiz.Commenting.LongConditionClosingComment.Missing"/>
         
         <!-- знак препинания в конце однострочного комментария -->
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
