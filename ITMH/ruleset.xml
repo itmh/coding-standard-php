@@ -86,5 +86,8 @@
         
         <!-- знак препинания в конце однострочного комментария -->
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+        
+        <!-- пробел между : и ) в конструкции if (condition): -->
+        <exclude name="PEAR.ControlStructures.MultilineConditionSpaceBeforeOpenBrace"/>
     </rule>
 </ruleset>
