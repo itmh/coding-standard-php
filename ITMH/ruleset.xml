@@ -88,6 +88,6 @@
         <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
         
         <!-- пробел между : и ) в конструкции if (condition): -->
-        <exclude name="PEAR.ControlStructures.MultilineConditionSpaceBeforeOpenBrace"/>
+        <exclude name="PEAR.ControlStructures.MultilineCondition.SpaceBeforeOpenBrace"/>
     </rule>
 </ruleset>
