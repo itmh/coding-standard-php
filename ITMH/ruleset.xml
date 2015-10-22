@@ -89,5 +89,8 @@
 
         <!-- пробел между : и ) в конструкции if (condition): -->
         <exclude name="PEAR.ControlStructures.MultiLineCondition.SpaceBeforeOpenBrace"/>
+        
+        <!-- ключ в объявлении массива без ключей -->
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeySpecified"/>
     </rule>
 </ruleset>
