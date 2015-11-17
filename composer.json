@@ -1,0 +1,15 @@
+{
+  "name": "itmh/php-standard",
+  "description": "ITMH PHP CodeSniffer standard",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Chshanovskiy Maxim",
+      "email": "chshanovskiy.maxim@itmh.ru"
+    }
+  ],
+  "require": {
+    "squizlabs/php_codesniffer": "2.*"
+  }
+}
