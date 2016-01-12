@@ -46,17 +46,18 @@ class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements PHP_CodeSniffe
             return;
         }
 
-        $commentEnd = $phpcsFile->findPrevious($find, ($stackPtr - 1), null, true);
-        $commentStart = $tokens[$commentEnd]['comment_opener'];
-
         $tagCoversFound = false;
-        foreach ($tokens[$commentStart]['comment_tags'] as $tag) {
-            if ($tokens[$tag]['content'] === self::ANNOTATION_COVERS) {
-                $string = $phpcsFile->findNext(T_DOC_COMMENT_STRING, $tag, $commentEnd);
-                $tagCoversFound = true;
-                if ($string === false || $tokens[$string]['line'] !== $tokens[$tag]['line']) {
-                    $error = sprintf('Content missing for %s tag in test method comment', self::ANNOTATION_COVERS);
-                    $phpcsFile->addError($error, $tag, 'EmptyCovers');
+
+        $commentEnd = $phpcsFile->findPrevious($find, ($stackPtr - 1), null, true);
+        if (array_key_exists('comment_opener', $tokens[$commentEnd])) {
+            foreach ($tokens[$tokens[$commentEnd]['comment_opener']]['comment_tags'] as $tag) {
+                if ($tokens[$tag]['content'] === self::ANNOTATION_COVERS) {
+                    $string = $phpcsFile->findNext(T_DOC_COMMENT_STRING, $tag, $commentEnd);
+                    $tagCoversFound = true;
+                    if ($string === false || $tokens[$string]['line'] !== $tokens[$tag]['line']) {
+                        $error = sprintf('Content missing for %s tag in test method comment', self::ANNOTATION_COVERS);
+                        $phpcsFile->addError($error, $tag, 'EmptyCovers');
+                    }
                 }
             }
         }
