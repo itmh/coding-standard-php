@@ -1,6 +1,6 @@
 {
-  "name": "itmh/php-standard",
-  "description": "ITMH PHP CodeSniffer standard",
+  "name": "itmh/coding-standard-php",
+  "description": "ITMH PHP_CodeSniffer standard",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -9,7 +9,7 @@
       "email": "chshanovskiy.maxim@itmh.ru"
     }
   ],
-  "require": {
+  "require-dev": {
     "squizlabs/php_codesniffer": "~2.5"
   }
 }
