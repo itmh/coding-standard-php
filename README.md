@@ -1,5 +1,5 @@
-Стандарт кодирования ITMH
-==============================
+Стандарт оформления PHP кода
+============================
 
 Установка
 ---------
@@ -10,14 +10,14 @@
 
 #####Склонировать репозиторий:
 
-    git clone https://github.com/itmh/php-standard.git $HOME/.php-standard
+    git clone https://github.com/itmh/coding-standard-php.git $HOME/.coding-standard-php
 
 #####Создать в папке со стандартами симлинк на склонированный репозиторий
 
-    ln -sv $HOME/.php-standard/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+    ln -sv $HOME/.coding-standard-php/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
 
 Использование
 -------------
 
-    phpcs --standard=ITMH /path/to/file.php
-    phpcs --standard=ITMH /path/to/directory
+    $HOME/.composer/vendor/bin/phpcs --standard=ITMH /path/to/file.php
+    $HOME/.composer/vendor/bin/phpcs --standard=ITMH /path/to/directory
