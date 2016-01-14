@@ -3,7 +3,7 @@
 /**
  * Class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff
  */
-class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements PHP_CodeSniffer_Sniff
+class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements \PHP_CodeSniffer_Sniff
 {
     const ANNOTATION_COVERS = '@covers';
     const TEST_FUNCTION_PREFIX = 'test';
@@ -21,17 +21,18 @@ class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements PHP_CodeSniffe
     /**
      * Processes the tokens that this sniff is interested in.
      *
-     * @param PHP_CodeSniffer_File $phpcsFile The file where the token was found.
-     * @param int                  $stackPtr  The position in the stack where the token was found.
+     * @param \PHP_CodeSniffer_File $phpcsFile The file where the token was found.
+     * @param int                   $stackPtr  The position in the stack where the token was found.
      *
      * @return void
      */
-    public function process(PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+    public function process(\PHP_CodeSniffer_File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
         $find = PHP_CodeSniffer_Tokens::$methodPrefixes;
         $find[] = T_WHITESPACE;
 
+        $isTagFound = false;
         $functionName = '';
         try {
             $functionName = $phpcsFile->getDeclarationName($stackPtr);
@@ -39,32 +40,28 @@ class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements PHP_CodeSniffe
             error_log($e->getMessage());
         }
 
-        var_dump($functionName);
-
         // Process only test* functions
         if (substr($functionName, 0, strlen(self::TEST_FUNCTION_PREFIX)) !== self::TEST_FUNCTION_PREFIX) {
             return;
         }
-
-        $tagCoversFound = false;
 
         $commentEnd = $phpcsFile->findPrevious($find, ($stackPtr - 1), null, true);
         if (array_key_exists('comment_opener', $tokens[$commentEnd])) {
             foreach ($tokens[$tokens[$commentEnd]['comment_opener']]['comment_tags'] as $tag) {
                 if ($tokens[$tag]['content'] === self::ANNOTATION_COVERS) {
                     $string = $phpcsFile->findNext(T_DOC_COMMENT_STRING, $tag, $commentEnd);
-                    $tagCoversFound = true;
+                    $isTagFound = true;
                     if ($string === false || $tokens[$string]['line'] !== $tokens[$tag]['line']) {
                         $error = sprintf('Content missing for %s tag in test method comment', self::ANNOTATION_COVERS);
-                        $phpcsFile->addError($error, $tag, 'EmptyCovers');
+                        $phpcsFile->addError($error, $tag, 'EmptyCoversTag');
                     }
                 }
             }
         }
 
-        if ($tagCoversFound === false) {
+        if ($isTagFound === false) {
             $error = sprintf('Missing %s tag in test method comment', self::ANNOTATION_COVERS);
-            $phpcsFile->addError($error, $stackPtr, 'MissingCovers');
+            $phpcsFile->addError($error, $stackPtr, 'MissingCoversTag');
         }
     }
 }
