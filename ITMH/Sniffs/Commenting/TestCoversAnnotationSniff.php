@@ -5,7 +5,7 @@
  */
 class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements \PHP_CodeSniffer_Sniff
 {
-    const ANNOTATION_COVERS = '@covers';
+    const ANNOTATION_COVERS = '@see';
     const TEST_FUNCTION_PREFIX = 'test';
 
     /**
