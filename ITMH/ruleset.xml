@@ -95,6 +95,9 @@
 
         <!-- 4ре пробела для case -->
         <exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
+        
+        <!-- разрешаем todo -->
+        <exclude name="Generic.Commenting.Todo.TaskFound"/>
     </rule>
 
     <!-- 4ре пробела для case -->
