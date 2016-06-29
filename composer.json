@@ -1,6 +1,6 @@
 {
   "name": "itmh/coding-standard-php",
-  "description": "ITMH PHP_CodeSniffer standard",
+  "description": "ITMH coding standards",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
@@ -10,6 +10,7 @@
     }
   ],
   "require-dev": {
-    "squizlabs/php_codesniffer": "~2.5"
+    "squizlabs/php_codesniffer": "^2.5",
+    "phpmd/phpmd": "^2.4"
   }
 }
