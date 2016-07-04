@@ -14,7 +14,7 @@
 
 #####Создать в папке со стандартами симлинк на склонированный репозиторий
 
-    ln -sv $HOME/.coding-standard-php/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
+    ln -sv $HOME/.coding-standard-php/phpcs/ITMH $HOME/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer/Standards
 
 Использование
 -------------
