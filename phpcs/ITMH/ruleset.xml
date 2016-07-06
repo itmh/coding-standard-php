@@ -21,8 +21,6 @@
         <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
         <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
 
-        <!-- // end class в конце класса -->
-        <exclude name="PEAR.Commenting.ClassComment.Missing"/>
         <!-- // end method в конце функции -->
         <exclude name="Squiz.Commenting.ClosingDeclarationComment.Missing"/>
         <!-- // end switch в конце условия -->
