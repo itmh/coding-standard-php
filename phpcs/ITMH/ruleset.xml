@@ -6,7 +6,7 @@
     <exclude-pattern>vendor/*</exclude-pattern>
     <exclude-pattern>lib/vendor/*</exclude-pattern>
 
-    <rule ref="PHPCS">
+    <rule ref="Squiz">
         <!-- phpdoc теги -->
         <exclude name="PEAR.Commenting.FileComment.Missing"/>
         <exclude name="PEAR.Commenting.FileComment.MissingVersion"/>
@@ -87,13 +87,13 @@
 
         <!-- пробел между : и ) в конструкции if (condition): -->
         <exclude name="PEAR.ControlStructures.MultiLineCondition.SpaceBeforeOpenBrace"/>
-        
+
         <!-- ключ в объявлении массива без ключей -->
         <exclude name="Squiz.Arrays.ArrayDeclaration.KeySpecified"/>
 
         <!-- 4ре пробела для case -->
         <exclude name="PEAR.WhiteSpace.ScopeIndent.IncorrectExact"/>
-        
+
         <!-- разрешаем todo -->
         <exclude name="Generic.Commenting.Todo.TaskFound"/>
     </rule>
