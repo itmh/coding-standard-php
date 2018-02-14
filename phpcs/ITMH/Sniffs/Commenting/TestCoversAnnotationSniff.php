@@ -1,9 +1,16 @@
 <?php
 
+namespace PHP_CodeSniffer\Standards\ITMH\Sniffs\Commenting;
+
+use PHP_CodeSniffer\Exceptions\RuntimeException;
+use PHP_CodeSniffer\Sniffs\Sniff;
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Util\Tokens;
+
 /**
- * Class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff
+ * Class Commenting_TestCoversAnnotationSniff
  */
-class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements \PHP_CodeSniffer_Sniff
+class TestCoversAnnotationSniff implements Sniff
 {
     const ANNOTATION_COVERS = '@see';
     const TEST_FUNCTION_PREFIX = 'test';
@@ -26,17 +33,17 @@ class ITMH_Sniffs_Commenting_TestCoversAnnotationSniff implements \PHP_CodeSniff
      *
      * @return void
      */
-    public function process(\PHP_CodeSniffer_File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
-        $find = PHP_CodeSniffer_Tokens::$methodPrefixes;
+        $find = Tokens::$methodPrefixes;
         $find[] = T_WHITESPACE;
 
         $isTagFound = false;
         $functionName = '';
         try {
             $functionName = $phpcsFile->getDeclarationName($stackPtr);
-        } catch (PHP_CodeSniffer_Exception $e) {
+        } catch (RuntimeException $e) {
             error_log($e->getMessage());
         }
 
